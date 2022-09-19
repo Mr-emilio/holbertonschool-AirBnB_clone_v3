@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Update places review"""
+"""objects that handle all default RestFul API actions for Reviews"""
 
 from flask import abort, request, jsonify, make_response
 from api.v1.views import app_views
@@ -61,6 +61,7 @@ def review_post(place_id):
     review = Review(**data)
     review.save()
     return make_response(jsonify(review.to_dict()), 201)
+
 
 @app_views.route("reviews/<string:review_id>", methods=['PUT'],
                  strict_slashes=False)
