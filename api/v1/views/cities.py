@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Update states"""
+"""objects that handles all default RestFul API actions for cities"""
 
 from flask import abort, request, jsonify, make_response
 from api.v1.views import app_views
