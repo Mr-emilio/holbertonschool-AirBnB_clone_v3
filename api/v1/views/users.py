@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Update Amenity"""
+"""objects that handle all default RestFul API actions for Users"""
 
 from flask import abort, request, jsonify, make_response
 from api.v1.views import app_views
@@ -10,7 +10,8 @@ from models.user import User
 
 @app_views.route("/users", strict_slashes=False)
 def get_user():
-    """Method for user"""
+    """Retrieves the list of all user objects
+    or a specific user"""
     new_list = []
     for user in storage.all(User).values():
         new_list.append(user.to_dict())
