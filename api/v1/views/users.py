@@ -20,7 +20,7 @@ def get_user():
 
 @app_views.route("/users/<string:user_id>", strict_slashes=False)
 def one_user(user_id):
-    """Method for one user"""
+    """Deletes a user object"""
     user = storage.get(User, user_id)
     if user is None:
         abort(404)
