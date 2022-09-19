@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""init file"""
+"""wildcard import of everything in the package api.v1.views.index"""
 
 from flask import Blueprint
 
