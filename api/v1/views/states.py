@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""states.py"""
+"""objects that handle all default RestFul API actions for States"""
 
 from flask import abort, request, jsonify, make_response
 from api.v1.views import app_views
@@ -9,7 +9,7 @@ from models.state import State
 
 @app_views.route("/states", strict_slashes=False)
 def get_state():
-    """Method for state"""
+    """Retrieves the list of all State objects"""
     new_list = []
     for state in storage.all("State").values():
         new_list.append(state.to_dict())
